@@ -24,25 +24,6 @@ var Winterfell = (function (_React$Component) {
 
     this.formComponent = null;
 
-    // Set our default values for props.
-    var props = _.extend({
-      schema: {
-        formPanels: [],
-        questionPanels: [],
-        questionSets: [],
-        classes: {}
-      },
-      questionAnswers: {},
-      ref: 'form',
-      encType: 'application/x-www-form-urlencoded',
-      method: 'POST',
-      action: '',
-      panelId: undefined,
-      disableSubmit: false,
-      renderError: undefined,
-      renderRequiredAsterisk: undefined
-    }, this.props);
-
     this.panelHistory = [];
 
     var schema = _.extend({
@@ -211,6 +192,14 @@ Winterfell.addValidationMethod = Winterfell.validation.addValidationMethod;
 Winterfell.addValidationMethods = Winterfell.validation.addValidationMethods;
 
 Winterfell.defaultProps = {
+  questionAnswers: {},
+  encType: 'application/x-www-form-urlencoded',
+  method: 'POST',
+  action: '',
+  panelId: undefined,
+  disableSubmit: false,
+  renderError: undefined,
+  renderRequiredAsterisk: undefined,
   onSubmit: function onSubmit() {},
   onUpdate: function onUpdate() {},
   onSwitchPanel: function onSwitchPanel() {},
