@@ -130,6 +130,7 @@ class Question extends React.Component {
                id={this.props.questionId}
                labelId={labelId}
                value={value}
+               validationErrors={validationErrors}
                text={this.props.input.text}
                options={this.props.input.options}
                placeholder={this.props.input.placeholder}
